@@ -135,7 +135,7 @@
   --txt-calc-screen-text: var(--clr-txt-light-yellow);
   --txt-keys: var(--clr-txt-light-yellow);
   --txt-keys-primary: #fff;
-  --txt-keys-accent: #fff;
+  --txt-keys-accent: var(--clr-txt-very-dark-blue);
 
   --bg-body: var(--clr-main-bg-very-dark-violet);
   --bg-toggle-container: var(--clr-screen-bg-very-dark-violet);
