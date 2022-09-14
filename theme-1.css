@@ -1,0 +1,66 @@
+@import "./general.css";
+
+body {
+  background-color: var(--clr-main-bg-very-dark-des-blue);
+}
+
+.calc__header > h1 {
+  color: white;
+}
+
+.title-container > span {
+  color: white;
+}
+
+.toggle-label {
+  color: white;
+}
+
+.toggle-container {
+  background-color: var(--clr-keypad-bg-very-dark-des-blue);
+}
+#toggle-btn {
+  background-color: var(--clr-key-bg-red);
+}
+
+.calc__screen {
+  background-color: var(--clr-screen-bg-very-dark-des-blue);
+}
+
+.calc__screen > span {
+  color: white;
+}
+
+.calc__keypad {
+  background-color: var(--clr-keypad-bg-very-dark-des-blue);
+}
+
+.keys {
+  background-color: var(--clr-key-bg-light-grayish-orange);
+  box-shadow: 0 3px 1px var(--clr-key-shadow-grayish-orange);
+  color: var(--clr-keypad-bg-very-dark-des-blue);
+}
+
+.keys.primary {
+  background-color: var(--clr-key-bg-des-dark-blue);
+  box-shadow: 0 3px 1px var(--clr-key-shadow-des-dark-blue);
+  color: white;
+}
+
+.keys.accent {
+  background-color: var(--clr-key-bg-red);
+  box-shadow: 0 3px 1px var(--clr-key-shadow-dark-red);
+  color: white;
+}
+
+.keys:hover {
+  background-color: var(--clr-t1-key-bg-hover);
+}
+
+.keys.primary:hover {
+  background-color: var(--clr-t1-key-primary-bg-hover);
+}
+
+.keys.accent:hover {
+  background-color: var(--clr-t1-key-accent-bg-hover);
+}
