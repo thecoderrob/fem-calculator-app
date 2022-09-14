@@ -11,15 +11,17 @@ const toggleTheme = () => {
 };
 
 const switchTheme = () => {
-  moveToggleBtn();
-  const themeEl = document.getElementById("theme");
-  theme.href = `theme-${currentTheme}.css`;
-};
-
-const moveToggleBtn = () => {
+  const body = document.body;
   if (currentTheme === 1) {
+    body.className = "theme-1";
     toggleBtn.style.marginLeft = "0%";
   }
-  if (currentTheme === 2) toggleBtn.style.marginLeft = "38%";
-  if (currentTheme === 3) toggleBtn.style.marginLeft = "78%";
+  if (currentTheme === 2) {
+    body.className = "theme-2";
+    toggleBtn.style.marginLeft = "38%";
+  }
+  if (currentTheme === 3) {
+    body.className = "theme-3";
+    toggleBtn.style.marginLeft = "78%";
+  }
 };

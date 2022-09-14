@@ -74,30 +74,93 @@
   --transition: "0.25s ease-in-out";
 }
 
+.theme-1 {
+  --txt-calc-header-h1: #fff;
+  --txt-title-container-span: #fff;
+  --txt-toggle-label-span: #fff;
+  --txt-calc-screen-text: #fff;
+  --txt-keys: var(--clr-keypad-bg-very-dark-des-blue);
+  --txt-keys-primary: #fff;
+  --txt-keys-accent: #fff;
+
+  --bg-body: var(--clr-main-bg-very-dark-des-blue);
+  --bg-toggle-container: var(--clr-keypad-bg-very-dark-des-blue);
+  --bg-toggle-btn: var(--clr-key-bg-red);
+  --bg-calc-screen: var(--clr-screen-bg-very-dark-des-blue);
+  --bg-calc-keypad: var(--clr-keypad-bg-very-dark-des-blue);
+  --bg-keys: var(--clr-key-bg-light-grayish-orange);
+  --bg-keys-primary: var(--clr-key-bg-des-dark-blue);
+  --bg-keys-accent: var(--clr-key-bg-red);
+
+  --bg-hover-keys: var(--clr-t1-key-bg-hover);
+  --bg-hover-keys-primary: var(--clr-t1-key-primary-bg-hover);
+  --bg-hover-keys-accent: var(--clr-t1-key-accent-bg-hover);
+
+  --box-shadow-keys: 0 3px 1px var(--clr-key-shadow-grayish-orange);
+  --box-shadow-keys-primary: 0 3px 1px var(--clr-key-shadow-des-dark-blue);
+  --box-shadow-keys-accent: 0 3px 1px var(--clr-key-shadow-dark-red);
+}
+
+.theme-2 {
+  --txt-calc-header-h1: var(--clr-txt-very-dark-grayish-yellow);
+  --txt-title-container-span: var(--clr-txt-very-dark-grayish-yellow);
+  --txt-toggle-label-span: var(--clr-txt-very-dark-grayish-yellow);
+  --txt-calc-screen-text: var(--clr-txt-very-dark-grayish-yellow);
+  --txt-keys: var(--clr-txt-very-dark-grayish-yellow);
+  --txt-keys-primary: #fff;
+  --txt-keys-accent: #fff;
+
+  --bg-body: var(--clr-main-bg-light-gray);
+  --bg-toggle-container: var(--clr-keypad-bg-grayish-red);
+  --bg-toggle-btn: var(--clr-key-bg-orange);
+  --bg-calc-screen: var(--clr-screen-bg-very-light-gray);
+  --bg-calc-keypad: var(--clr-keypad-bg-grayish-red);
+  --bg-keys: var(--clr-key-bg-light-grayish-yellow);
+  --bg-keys-primary: var(--clr-key-bg-dark-moderate-cyan);
+  --bg-keys-accent: var(--clr-key-bg-orange);
+
+  --bg-hover-keys: var(--clr-t2-key-bg-hover);
+  --bg-hover-keys-primary: var(--clr-t2-key-primary-bg-hover);
+  --bg-hover-keys-accent: var(--clr-t2-key-accent-bg-hover);
+
+  --box-shadow-keys: 0 3px 1px var(--clr-key-shadow-grayish-orange);
+  --box-shadow-keys-primary: 0 3px 1px var(--clr-key-bg-very-dark-cyan);
+  --box-shadow-keys-accent: 0 3px 1px var(--clr-key-bg-dark-orange);
+}
+
+.theme-3 {
+  --txt-calc-header-h1: var(--clr-txt-light-yellow);
+  --txt-title-container-span: var(--clr-txt-light-yellow);
+  --txt-toggle-label-span: var(--clr-txt-light-yellow);
+  --txt-calc-screen-text: var(--clr-txt-light-yellow);
+  --txt-keys: var(--clr-txt-light-yellow);
+  --txt-keys-primary: #fff;
+  --txt-keys-accent: #fff;
+
+  --bg-body: var(--clr-main-bg-very-dark-violet);
+  --bg-toggle-container: var(--clr-screen-bg-very-dark-violet);
+  --bg-toggle-btn: var(--clr-key-bg-pure-cyan);
+  --bg-calc-screen: var(--clr-screen-bg-very-dark-violet);
+  --bg-calc-keypad: var(--clr-screen-bg-very-dark-violet);
+  --bg-keys: var(--clr-key-bg-very-dark-violet);
+  --bg-keys-primary: var(--clr-key-bg-dark-violet);
+  --bg-keys-accent: var(--clr-key-bg-pure-cyan);
+
+  --bg-hover-keys: var(--clr-t3-key-bg-hover);
+  --bg-hover-keys-primary: var(--clr-t3-key-primary-bg-hover);
+  --bg-hover-keys-accent: var(--clr-t3-key-accent-bg-hover);
+
+  --box-shadow-keys: 0 3px 1px var(--clr-key-bg-dark-magenta);
+  --box-shadow-keys-primary: 0 3px 1px var(--clr-key-bg-vivid-magenta);
+  --box-shadow-keys-accent: 0 3px 1px var(--clr-key-bg-soft-cyan);
+}
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
   transition: 0.15s ease-in-out;
 }
-
-/* body,
-.calc__header > h1,
-.title-container > span,
-.toggle-label,
-.toggle-container,
-#toggle-btn,
-.calc__screen,
-.calc__screen > span,
-.calc__keypad,
-.keys,
-.keys.primary,
-.keys.accent,
-.keys:hover,
-.keys.primary:hover,
-.keys.accent:hover {
-  transition: 0.15s ease-in-out;
-} */
 
 html,
 body,
@@ -112,6 +175,7 @@ label {
 
 body {
   font-family: var(--ff-primary);
+  background-color: var(--bg-body);
 }
 
 main {
@@ -126,7 +190,6 @@ main {
 .col-span-2 {
   grid-column: span 2;
 }
-
 /* End Util */
 
 .wrapper {
@@ -153,6 +216,12 @@ main {
 
 .calc__header > h1 {
   font-size: var(--fs-h1);
+
+  color: var(--txt-calc-header-h1);
+}
+
+.title-container > span {
+  color: var(--txt-title-container-span);
 }
 
 .theme-container {
@@ -171,6 +240,8 @@ main {
 
 .toggle-label {
   font-size: var(--fs-theme);
+
+  color: var(--txt-toggle-label-span);
 }
 
 .theme-container .title-container {
@@ -187,6 +258,8 @@ main {
   border-radius: 1em;
   padding: 0.25em 0.3em;
   transition: 0.2s ease-in-out;
+
+  background-color: var(--bg-toggle-container);
 }
 
 .toggle-container #toggle-btn {
@@ -194,6 +267,8 @@ main {
   width: 10px;
   border-radius: 50%;
   transition: 0.2s ease-in-out;
+
+  background-color: var(--bg-toggle-btn);
 }
 
 .calc__screen {
@@ -207,16 +282,22 @@ main {
   padding: 1em;
   gap: 0;
   min-height: 7em;
+
+  background-color: var(--bg-calc-screen);
 }
 
 .calc__screen .previous-digit {
   font-size: var(--fs-screen-previous);
   font-weight: var(--fw-medium);
+
+  color: var(--txt-calc-screen-text);
 }
 
 .calc__screen .current-digit {
   font-size: var(--fs-screen-current);
   font-weight: var(--fw-bold);
+
+  color: var(--txt-calc-screen-text);
 }
 
 .calc__keypad {
@@ -224,6 +305,8 @@ main {
   grid-template-columns: repeat(4, 1fr);
   padding: 1.5em;
   gap: 1.25em;
+
+  background-color: var(--bg-calc-keypad);
 }
 
 .keys {
@@ -237,6 +320,22 @@ main {
   padding: 0.5em;
   border: none;
   border-radius: 0.25em;
+
+  background-color: var(--bg-keys);
+  box-shadow: var(--box-shadow-keys);
+  color: var(--txt-keys);
+}
+
+.keys.primary {
+  background-color: var(--bg-keys-primary);
+  box-shadow: var(--box-shadow-keys-primary);
+  color: var(--txt-keys-primary);
+}
+
+.keys.keys.accent {
+  background-color: var(--bg-keys-accent);
+  box-shadow: var(--box-shadow-keys-accent);
+  color: var(--txt-keys-accent);
 }
 
 .keys.primary,
