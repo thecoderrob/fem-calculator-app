@@ -113,7 +113,6 @@ numberBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     calculator.appendNumber(btn.innerHTML);
     calculator.updateDisplay();
-    console.log(btn.innerText);
   });
 });
 
@@ -121,12 +120,10 @@ operationBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     calculator.selectOperation(btn.innerHTML);
     calculator.updateDisplay();
-    console.log(btn.innerText);
   });
 });
 
 equalsBtn.addEventListener("click", () => {
-  console.log("meme");
   calculator.compute();
   calculator.updateDisplay();
 });
