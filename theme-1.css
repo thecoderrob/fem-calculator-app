@@ -27,7 +27,8 @@ body {
   background-color: var(--clr-screen-bg-very-dark-des-blue);
 }
 
-.calc__screen > span {
+.calc__screen .previous-digit,
+.calc__screen .current-digit {
   color: white;
 }
 

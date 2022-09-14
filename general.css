@@ -57,7 +57,8 @@
   --clr-t3-key-primary-bg-hover: #8730b2;
   --clr-t3-key-accent-bg-hover: #94fff9;
 
-  --fs-screen: 2rem;
+  --fs-screen-current: 2rem;
+  --fs-screen-previous: 1.5rem;
   --fs-keys: 1.75rem;
   --fs-keys-special: 1.25rem;
   --fs-h1: 1.25rem;
@@ -77,11 +78,26 @@
 *::before,
 *::after {
   box-sizing: border-box;
-}
-
-* {
   transition: 0.15s ease-in-out;
 }
+
+/* body,
+.calc__header > h1,
+.title-container > span,
+.toggle-label,
+.toggle-container,
+#toggle-btn,
+.calc__screen,
+.calc__screen > span,
+.calc__keypad,
+.keys,
+.keys.primary,
+.keys.accent,
+.keys:hover,
+.keys.primary:hover,
+.keys.accent:hover {
+  transition: 0.15s ease-in-out;
+} */
 
 html,
 body,
@@ -125,6 +141,7 @@ main {
   display: grid;
   gap: 1em;
   width: 425px;
+  height: minmax(700px, auto);
 }
 
 .calc__header {
@@ -180,13 +197,25 @@ main {
 }
 
 .calc__screen {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  word-wrap: break-word;
+  word-break: break-all;
   width: 100%;
-  padding: 1.5em;
-  text-align: right;
+  padding: 1em;
+  gap: 0;
+  min-height: 7em;
 }
 
-.calc__screen > span {
-  font-size: var(--fs-screen);
+.calc__screen .previous-digit {
+  font-size: var(--fs-screen-previous);
+  font-weight: var(--fw-medium);
+}
+
+.calc__screen .current-digit {
+  font-size: var(--fs-screen-current);
   font-weight: var(--fw-bold);
 }
 
@@ -205,7 +234,7 @@ main {
   font-size: var(--fs-keys);
   font-weight: var(--fw-bold);
 
-  padding: 0.25em;
+  padding: 0.5em;
   border: none;
   border-radius: 0.25em;
 }
@@ -220,4 +249,10 @@ main {
 .keys.accent:hover,
 .toggle-container #toggle-btn {
   cursor: pointer;
+}
+
+@media (max-width: 450px) {
+  body {
+    padding: 0 0.5em;
+  }
 }

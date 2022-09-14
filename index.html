@@ -23,7 +23,7 @@
     />
 
     <!--CSS-->
-    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="theme-1.css" id="theme" />
     <style>
       .attribution {
         font-size: 11px;
@@ -39,7 +39,7 @@
       <div class="wrapper">
         <div class="calculator">
           <header class="calc__header">
-            <h1 class="calc__header-title">calc</h1>
+            <h1>calc</h1>
             <div class="theme-container">
               <div></div>
               <div class="toggle-label-container">
@@ -57,64 +57,29 @@
           </header>
 
           <section class="calc__screen br-05">
-            <span class="calc__screen-text">399,981</span>
+            <div data-previous-text class="previous-digit"></div>
+            <div data-current-text class="current-digit"></div>
           </section>
 
           <section class="calc__keypad br-05">
-            <div class="keys">
-              <div class="key-text">7</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">8</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">9</div>
-            </div>
-            <div class="keys special primary">
-              <div class="key-text-special">DEL</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">4</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">5</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">6</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">+</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">1</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">2</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">3</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">-</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">.</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">0</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">/</div>
-            </div>
-            <div class="keys">
-              <div class="key-text">x</div>
-            </div>
-            <div class="keys col-span-2 primary">
-              <div class="key-text">RESET</div>
-            </div>
-            <div class="keys col-span-2 accent">
-              <div class="key-text">=</div>
-            </div>
+            <button data-number class="keys">7</button>
+            <button data-number class="keys">8</button>
+            <button data-number class="keys">9</button>
+            <button data-delete class="keys primary">DEL</button>
+            <button data-number class="keys">4</button>
+            <button data-number class="keys">5</button>
+            <button data-number class="keys">6</button>
+            <button data-operation class="keys">+</button>
+            <button data-number class="keys">1</button>
+            <button data-number class="keys">2</button>
+            <button data-number class="keys">3</button>
+            <button data-operation class="keys">-</button>
+            <button data-number class="keys">.</button>
+            <button data-number class="keys">0</button>
+            <button data-operation class="keys">/</button>
+            <button data-operation class="keys">x</button>
+            <button data-reset class="keys col-span-2 primary">RESET</button>
+            <button data-equals class="keys col-span-2 accent">=</button>
           </section>
         </div>
       </div>
@@ -125,6 +90,7 @@
         >Frontend Mentor</a
       >. Coded by <a href="#">Your Name Here</a>.
     </div>
-    <script src="/index.js"></script>
+    <script src="/toggle.js"></script>
+    <script src="/calculator.js"></script>
   </body>
 </html>
